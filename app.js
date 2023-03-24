@@ -9,7 +9,7 @@ const socialHours = document.querySelector('#social-hours')
 const selfCareHours = document.querySelector('#self-care-hours')
 
 
-// pobranie danych z innego pliku 
+// pobranie danych z innego pliku i od razu podmienianie (żeby było szybiej)
 
 const url = './data.json'
 
@@ -17,12 +17,17 @@ let data;
 async function fetchData() {
     const response = await fetch(url);
     data = await response.json();
+    workHours.innerHTML = `${data[0].timeframes.daily.current} hrs`;
+    playHours.innerHTML = `${data[1].timeframes.daily.current} hrs`;
+    studyHours.innerHTML = `${data[2].timeframes.daily.current} hrs`;
+    exerciseHours.innerHTML = `${data[3].timeframes.daily.current} hrs`;
+    socialHours.innerHTML = `${data[4].timeframes.daily.current} hrs`;
+    selfCareHours.innerHTML = `${data[5].timeframes.daily.current} hrs`;
 }
 
-// zamiana na daily
+// zamiana na daily (usunięto await na fetch bo za długo)
 
 async function getDailyData() {
-    await fetchData();
     workHours.innerHTML = `${data[0].timeframes.daily.current} hrs`;
     playHours.innerHTML = `${data[1].timeframes.daily.current} hrs`;
     studyHours.innerHTML = `${data[2].timeframes.daily.current} hrs`;
@@ -35,7 +40,6 @@ async function getDailyData() {
 
 
 async function getWeeklyData() {
-    await fetchData();
     workHours.innerHTML = `${data[0].timeframes.weekly.current} hrs`;
     playHours.innerHTML = `${data[1].timeframes.weekly.current} hrs`;
     studyHours.innerHTML = `${data[2].timeframes.weekly.current} hrs`;
@@ -49,7 +53,7 @@ async function getWeeklyData() {
 const dailyButton = document.querySelector("#daily-button");
 const weeklyButton = document.querySelector("#weekly-button");
 
-getDailyData()
+fetchData()
 
 dailyButton.addEventListener("click", getDailyData)
 weeklyButton.addEventListener("click", getWeeklyData)
