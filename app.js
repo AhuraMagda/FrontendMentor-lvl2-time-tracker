@@ -13,12 +13,16 @@ const selfCareHours = document.querySelector('#self-care-hours')
 
 const url = './data.json'
 
-// Podmiana godzin na te daily
+let data;
+async function fetchData() {
+    const response = await fetch(url);
+    data = await response.json();
+}
 
+// zamiana na daily
 
 async function getDailyData() {
-    const response = await fetch(url);
-    const data = await response.json();
+    await fetchData();
     workHours.innerHTML = `${data[0].timeframes.daily.current} hrs`;
     playHours.innerHTML = `${data[1].timeframes.daily.current} hrs`;
     studyHours.innerHTML = `${data[2].timeframes.daily.current} hrs`;
@@ -31,8 +35,7 @@ async function getDailyData() {
 
 
 async function getWeeklyData() {
-    const response = await fetch(url);
-    const data = await response.json();
+    await fetchData();
     workHours.innerHTML = `${data[0].timeframes.weekly.current} hrs`;
     playHours.innerHTML = `${data[1].timeframes.weekly.current} hrs`;
     studyHours.innerHTML = `${data[2].timeframes.weekly.current} hrs`;
