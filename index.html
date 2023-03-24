@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
@@ -13,7 +16,17 @@
 <body>
 
   <main>
-    <div class="grid-part grid-row-span-2"></div>
+    <div class="grid-part grid-row-span-2">
+      <span>
+        <p>report for</p>
+        <h1>Jeremy<br>Robson</h1>
+      </span>
+      <span>
+        <p class="change-display" id="daily-button">Daily</p>
+        <p class="change-display" id="weekly-button">Weekly</p>
+        <p class="change-display" id="monthly-button">Monthly</p>
+      </span>
+    </div>
     <div class="grid-part tracker">
       <p>Work</p>
       <h2 id="work-hours">32hrs</h2>
@@ -21,27 +34,27 @@
     </div>
     <div class="grid-part tracker">
       <p>Play</p>
-      <h2>32hrs</h2>
+      <h2 id="play-hours">32hrs</h2>
       <p>Last Week - 36hrs</p>
     </div>
     <div class="grid-part tracker">
       <p>Study</p>
-      <h2>32hrs</h2>
+      <h2 id="study-hours">32hrs</h2>
       <p>Last Week - 36hrs</p>
     </div>
     <div class="grid-part tracker">
       <p>Exercise</p>
-      <h2>32hrs</h2>
+      <h2 id="exercise-hours">32hrs</h2>
       <p>Last Week - 36hrs</p>
     </div>
     <div class="grid-part tracker">
       <p>Social</p>
-      <h2>32hrs</h2>
+      <h2 id="social-hours">32hrs</h2>
       <p>Last Week - 36hrs</p>
     </div>
     <div class="grid-part tracker">
       <p>Self care</p>
-      <h2>32hrs</h2>
+      <h2 id="self-care-hours">32hrs</h2>
       <p>Last Week - 36hrs</p>
     </div>
   </main>

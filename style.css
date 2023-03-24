@@ -5,25 +5,37 @@
 }
 
 body {
-    background-color: darkblue;
+    background-color: #0d1323;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Rubik', sans-serif;
 }
 
 main {
     height: 30%;
     width: 70%;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
 }
 
 .grid-part {
-    background-color: white;
-    border: 1px solid red;
+    background-color: #1d204b;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.grid-part span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .grid-row-span-2 {
@@ -33,28 +45,38 @@ main {
 
 .tracker {
     position: relative;
-    height: 87%;
+    height: 77%;
     align-self: end;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgb(9, 4, 100);
-    color: white;
+    background-color: #1d204b;
+    min-height: 10rem;
 }
 
 .tracker::before {
     content: "";
     height: 50px;
     width: 100%;
-    background-color: orange;
+    background-color: #ff8b64;
     position: absolute;
     top: -15%;
     z-index: -1;
     border-radius: 10px;
     background-image: url(./images/icon-work.svg);
     background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 40%;
+    background-position: top -10px right 10px;
+    background-size: 30%;
+}
+
+.tracker h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+.change-display {
+    color: #6064a4;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.change-display:hover {
+    color: white;
 }
