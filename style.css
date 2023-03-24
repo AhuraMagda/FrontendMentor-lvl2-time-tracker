@@ -17,6 +17,8 @@ main {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
+    max-height: 90%;
+    max-width: 90%;
 }
 
 h1 {
@@ -25,7 +27,6 @@ h1 {
 }
 
 .grid-part {
-    max-width: 14rem;
     background-color: #1d204b;
     border-radius: 10px;
     color: white;
@@ -59,11 +60,11 @@ h1 {
     border-radius: 10px;
     width: 100%;
     height: 70%;
-    padding: 2rem;
+    padding: 3rem 2rem;
 }
 
 #main-part-name div {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
 
 #main-part-type {
@@ -71,7 +72,7 @@ h1 {
     height: 30%;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 .grid-row-span-2 {
@@ -130,11 +131,28 @@ h1 {
 .tracker h2 {
     font-size: 2.2rem;
     font-weight: 300;
-    padding: 0 1rem;
+    padding: 0.8rem 1rem .2rem 1.6rem;
+}
+
+.tracer-title {
+    position: relative;
+}
+
+.tracker-title::after {
+    content: "...";
+    font-size: 1.5rem;
+    color: #6064a4;;
+    position: absolute;
+    right: 10%;
+    top: 5%;
 }
 
 .tracker p {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+}
+
+.tracker > p {
+    color: #7b7daf;
 }
 
 .change-display {
@@ -148,27 +166,33 @@ h1 {
 }
 
 
-@media screen and (max-width: 1100px) {
-    .grid-row-span-2 {
-        grid-row: span 1;
-    }
+@media screen and (max-width: 1050px) {
     main {
         max-width: 19rem;
         gap: 3rem;
         grid-template-columns: 1fr;
     }
 
+    .grid-row-span-2 {
+        grid-row: span 1;
+    }
+
     h1 {
         font-size: 1rem;
     }
+    .tracker {
+        flex-direction: row;
+        align-items: center;
+    }
 
     .grid-part {
-        min-height: 8rem;
+        min-height: 6rem;
     }
 
     #main-part-name {
         flex-direction: row;
         align-items: center;
+        padding: 2rem 1rem;
     }
 
     #main-part-name div {
@@ -177,9 +201,13 @@ h1 {
 
     #main-part-type {
         flex-direction: row;
+        align-items: center;
     }
 
     .main-part {
         min-height: 11rem;
+    }
+    .tracker > p {
+        padding-top: 2rem;
     }
 }
