@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    height: 30%;
+    width: 70%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-part {
+    background-color: white;
+    border: 1px solid red;
+
+}
+
+.grid-row-span-2 {
+    grid-row: span 2;
+}
+
+
+.tracker {
+    position: relative;
+    height: 87%;
+    align-self: end;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(9, 4, 100);
+    color: white;
+}
+
+.tracker::before {
+    content: "";
+    height: 50px;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    top: -15%;
+    z-index: -1;
+    border-radius: 10px;
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 40%;
+}
