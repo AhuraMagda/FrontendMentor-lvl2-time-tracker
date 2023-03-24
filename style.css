@@ -14,28 +14,64 @@ body {
 }
 
 main {
-    height: 30%;
-    width: 70%;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
 }
 
+h1 {
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+
 .grid-part {
+    max-width: 14rem;
     background-color: #1d204b;
     border-radius: 10px;
     color: white;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.grid-part span {
+.main-part {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main-part img {
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.grid-part span {
+    display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+#main-part-name {
+    background-color: #5746ea;
+    border-radius: 10px;
+    width: 100%;
+    height: 70%;
+    padding: 2rem;
+}
+
+#main-part-name div {
+    padding: 2rem 0;
+}
+
+#main-part-type {
+    width: 100%;
+    height: 30%;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 1rem;
 }
 
 .grid-row-span-2 {
@@ -45,19 +81,18 @@ main {
 
 .tracker {
     position: relative;
-    height: 77%;
+    height: 80%;
     align-self: end;
-    background-color: #1d204b;
-    min-height: 10rem;
+    background-color: #1d204b; 
 }
 
 .tracker::before {
     content: "";
-    height: 50px;
+    height: 4rem;
     width: 100%;
     background-color: #ff8b64;
     position: absolute;
-    top: -15%;
+    top: -25%;
     z-index: -1;
     border-radius: 10px;
     background-image: url(./images/icon-work.svg);
@@ -66,9 +101,40 @@ main {
     background-size: 30%;
 }
 
+.play-tracker::before {
+    background-color: hsl(195, 74%, 62%);
+    background-image: url(./images/icon-play.svg);
+}
+
+.study-tracker::before {
+    background-color: hsl(348, 100%, 68%);
+    background-image: url(./images/icon-study.svg);
+}
+
+.exercise-tracker::before {
+    background-color: hsl(145, 58%, 55%);
+    background-image: url(./images/icon-exercise.svg);
+}
+
+.social-tracker::before {
+    background-color: hsl(264, 64%, 52%);
+    background-image: url(./images/icon-social.svg);
+}
+
+.self-care-tracker::before {
+    background-color: hsl(43, 84%, 65%);
+    background-image: url(./images/icon-self-care.svg);
+}
+
+
 .tracker h2 {
     font-size: 2.2rem;
     font-weight: 300;
+    padding: 0 1rem;
+}
+
+.tracker p {
+    padding: 0 1rem;
 }
 
 .change-display {
@@ -79,4 +145,41 @@ main {
 
 .change-display:hover {
     color: white;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .grid-row-span-2 {
+        grid-row: span 1;
+    }
+    main {
+        max-width: 19rem;
+        gap: 3rem;
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    .grid-part {
+        min-height: 8rem;
+    }
+
+    #main-part-name {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #main-part-name div {
+        padding: 0 2rem;
+    }
+
+    #main-part-type {
+        flex-direction: row;
+    }
+
+    .main-part {
+        min-height: 11rem;
+    }
 }

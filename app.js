@@ -20,6 +20,8 @@ let exerciseDataDaily;
 let socialDataDaily;
 let selfCareDataDaily;
 
+// Podmiana godzin na te daily
+
 async function getDailyData() {
     const response = await fetch(url);
     const data = await response.json();
@@ -51,8 +53,7 @@ async function getWeeklyData() {
     selfCareDataWeekly = data[5].timeframes.weekly.current
 }
 
-
-// Podmiana godzin na te daily
+// Podmiana godzin na te weekly
 
 async function changeInnerDataDaily() {
     await getDailyData()
