@@ -1,3 +1,5 @@
+/* Global */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +10,13 @@ body {
     background-color: #0d1323;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     font-family: 'Rubik', sans-serif;
 }
+
+/* Container */
 
 main {
     display: grid;
@@ -20,6 +25,12 @@ main {
     max-height: 90%;
     max-width: 90%;
 }
+
+.grid-row-span-2 {
+    grid-row: span 2;
+}
+
+/* Tracker with a name and buttons */
 
 h1 {
     font-weight: 300;
@@ -42,14 +53,7 @@ h1 {
     flex-direction: column;
 }
 
-.main-part img {
-    height: 4rem;
-    width: 4rem;
-    border: 2px solid white;
-    border-radius: 50%;
-}
-
-.grid-part span {
+.main-part span {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -67,7 +71,14 @@ h1 {
     padding: 1.5rem 0;
 }
 
-#main-part-type {
+.main-part img {
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+#main-part-buttons {
     width: 100%;
     height: 30%;
     align-items: flex-start;
@@ -75,10 +86,7 @@ h1 {
     padding: 1rem 2rem;
 }
 
-.grid-row-span-2 {
-    grid-row: span 2;
-}
-
+/* Single tracker */
 
 .tracker {
     position: relative;
@@ -155,6 +163,8 @@ h1 {
     color: #7b7daf;
 }
 
+/* Buttons */
+
 .change-display {
     color: #6064a4;
     cursor: pointer;
@@ -165,6 +175,7 @@ h1 {
     color: white;
 }
 
+/* Media queries */
 
 @media screen and (max-width: 1050px) {
     main {
@@ -177,16 +188,25 @@ h1 {
         grid-row: span 1;
     }
 
+    .grid-part {
+        min-height: 6rem;
+    }
+
     h1 {
         font-size: 1rem;
     }
+
     .tracker {
         flex-direction: row;
         align-items: center;
     }
 
-    .grid-part {
-        min-height: 6rem;
+    .tracker > p {
+        padding-top: 2rem;
+    }
+
+    .main-part {
+        min-height: 11rem;
     }
 
     #main-part-name {
@@ -199,15 +219,8 @@ h1 {
         padding: 0 2rem;
     }
 
-    #main-part-type {
+    #main-part-buttons {
         flex-direction: row;
         align-items: center;
-    }
-
-    .main-part {
-        min-height: 11rem;
-    }
-    .tracker > p {
-        padding-top: 2rem;
     }
 }

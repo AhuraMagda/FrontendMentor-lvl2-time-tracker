@@ -8,8 +8,14 @@ const exerciseHours = document.querySelector('#exercise-hours')
 const socialHours = document.querySelector('#social-hours')
 const selfCareHours = document.querySelector('#self-care-hours')
 
+const previousWorkHours = document.querySelector('#previous-work-hours')
+const previousPlayHours = document.querySelector('#previous-play-hours')
+const previousStudyHours = document.querySelector('#previous-study-hours')
+const previousExerciseHours = document.querySelector('#previous-exercise-hours')
+const previousSocialHours = document.querySelector('#previous-social-hours')
+const previousSelfCareHours = document.querySelector('#previous-self-care-hours')
 
-// pobranie danych z innego pliku i od razu podmienianie (żeby było szybiej)
+// Fetch data
 
 const url = './data.json'
 
@@ -23,9 +29,16 @@ async function fetchData() {
     exerciseHours.innerHTML = `${data[3].timeframes.daily.current} hrs`;
     socialHours.innerHTML = `${data[4].timeframes.daily.current} hrs`;
     selfCareHours.innerHTML = `${data[5].timeframes.daily.current} hrs`;
+
+    previousWorkHours.innerHTML = `${data[0].timeframes.daily.previous} hrs`;
+    previousPlayHours.innerHTML = `${data[1].timeframes.daily.previous} hrs`;
+    previousStudyHours.innerHTML = `${data[2].timeframes.daily.previous} hrs`;
+    previousExerciseHours.innerHTML = `${data[3].timeframes.daily.previous} hrs`;
+    previousSocialHours.innerHTML = `${data[4].timeframes.daily.previous} hrs`;
+    previousSelfCareHours.innerHTML = `${data[5].timeframes.daily.previous} hrs`;
 }
 
-// zamiana na daily (usunięto await na fetch bo za długo)
+// Get and change data data
 
 async function getDailyData() {
     workHours.innerHTML = `${data[0].timeframes.daily.current} hrs`;
@@ -34,10 +47,14 @@ async function getDailyData() {
     exerciseHours.innerHTML = `${data[3].timeframes.daily.current} hrs`;
     socialHours.innerHTML = `${data[4].timeframes.daily.current} hrs`;
     selfCareHours.innerHTML = `${data[5].timeframes.daily.current} hrs`;
+
+    previousWorkHours.innerHTML = `${data[0].timeframes.daily.previous} hrs`;
+    previousPlayHours.innerHTML = `${data[1].timeframes.daily.previous} hrs`;
+    previousStudyHours.innerHTML = `${data[2].timeframes.daily.previous} hrs`;
+    previousExerciseHours.innerHTML = `${data[3].timeframes.daily.previous} hrs`;
+    previousSocialHours.innerHTML = `${data[4].timeframes.daily.previous} hrs`;
+    previousSelfCareHours.innerHTML = `${data[5].timeframes.daily.previous} hrs`;
 }
-
-// Podmiana godzin na te weekly
-
 
 async function getWeeklyData() {
     workHours.innerHTML = `${data[0].timeframes.weekly.current} hrs`;
@@ -46,14 +63,39 @@ async function getWeeklyData() {
     exerciseHours.innerHTML = `${data[3].timeframes.weekly.current} hrs`;
     socialHours.innerHTML = `${data[4].timeframes.weekly.current} hrs`;
     selfCareHours.innerHTML = `${data[5].timeframes.weekly.current} hrs`;
+
+    previousWorkHours.innerHTML = `${data[0].timeframes.weekly.previous} hrs`;
+    previousPlayHours.innerHTML = `${data[1].timeframes.weekly.previous} hrs`;
+    previousStudyHours.innerHTML = `${data[2].timeframes.weekly.previous} hrs`;
+    previousExerciseHours.innerHTML = `${data[3].timeframes.weekly.previous} hrs`;
+    previousSocialHours.innerHTML = `${data[4].timeframes.weekly.previous} hrs`;
+    previousSelfCareHours.innerHTML = `${data[5].timeframes.weekly.previous} hrs`;
 }
 
-// guziczki
+async function getMonthlyData() {
+    workHours.innerHTML = `${data[0].timeframes.monthly.current} hrs`;
+    playHours.innerHTML = `${data[1].timeframes.monthly.current} hrs`;
+    studyHours.innerHTML = `${data[2].timeframes.monthly.current} hrs`;
+    exerciseHours.innerHTML = `${data[3].timeframes.monthly.current} hrs`;
+    socialHours.innerHTML = `${data[4].timeframes.monthly.current} hrs`;
+    selfCareHours.innerHTML = `${data[5].timeframes.monthly.current} hrs`;
+
+    previousWorkHours.innerHTML = `${data[0].timeframes.monthly.previous} hrs`;
+    previousPlayHours.innerHTML = `${data[1].timeframes.monthly.previous} hrs`;
+    previousStudyHours.innerHTML = `${data[2].timeframes.monthly.previous} hrs`;
+    previousExerciseHours.innerHTML = `${data[3].timeframes.monthly.previous} hrs`;
+    previousSocialHours.innerHTML = `${data[4].timeframes.monthly.previous} hrs`;
+    previousSelfCareHours.innerHTML = `${data[5].timeframes.monthly.previous} hrs`;
+}
+
+// Buttons
 
 const dailyButton = document.querySelector("#daily-button");
 const weeklyButton = document.querySelector("#weekly-button");
+const monthlyButton = document.querySelector("#monthly-button")
 
 fetchData()
 
 dailyButton.addEventListener("click", getDailyData)
 weeklyButton.addEventListener("click", getWeeklyData)
+monthlyButton.addEventListener("click", getMonthlyData)
