@@ -30,12 +30,12 @@ async function fetchData() {
     socialHours.innerHTML = `${data[4].timeframes.daily.current} hrs`;
     selfCareHours.innerHTML = `${data[5].timeframes.daily.current} hrs`;
 
-    previousWorkHours.innerHTML = `${data[0].timeframes.daily.previous} hrs`;
-    previousPlayHours.innerHTML = `${data[1].timeframes.daily.previous} hrs`;
-    previousStudyHours.innerHTML = `${data[2].timeframes.daily.previous} hrs`;
-    previousExerciseHours.innerHTML = `${data[3].timeframes.daily.previous} hrs`;
-    previousSocialHours.innerHTML = `${data[4].timeframes.daily.previous} hrs`;
-    previousSelfCareHours.innerHTML = `${data[5].timeframes.daily.previous} hrs`;
+    previousWorkHours.innerHTML = `Last week - ${data[0].timeframes.daily.previous} hrs`;
+    previousPlayHours.innerHTML = `Last week - ${data[1].timeframes.daily.previous} hrs`;
+    previousStudyHours.innerHTML = `Last week - ${data[2].timeframes.daily.previous} hrs`;
+    previousExerciseHours.innerHTML = `Last week - ${data[3].timeframes.daily.previous} hrs`;
+    previousSocialHours.innerHTML = `Last week - ${data[4].timeframes.daily.previous} hrs`;
+    previousSelfCareHours.innerHTML = `Last week - ${data[5].timeframes.daily.previous} hrs`;
 }
 
 // Get and change data data
@@ -48,12 +48,12 @@ async function getDailyData() {
     socialHours.innerHTML = `${data[4].timeframes.daily.current} hrs`;
     selfCareHours.innerHTML = `${data[5].timeframes.daily.current} hrs`;
 
-    previousWorkHours.innerHTML = `${data[0].timeframes.daily.previous} hrs`;
-    previousPlayHours.innerHTML = `${data[1].timeframes.daily.previous} hrs`;
-    previousStudyHours.innerHTML = `${data[2].timeframes.daily.previous} hrs`;
-    previousExerciseHours.innerHTML = `${data[3].timeframes.daily.previous} hrs`;
-    previousSocialHours.innerHTML = `${data[4].timeframes.daily.previous} hrs`;
-    previousSelfCareHours.innerHTML = `${data[5].timeframes.daily.previous} hrs`;
+    previousWorkHours.innerHTML = `Last week - ${data[0].timeframes.daily.previous} hrs`;
+    previousPlayHours.innerHTML = `Last week - ${data[1].timeframes.daily.previous} hrs`;
+    previousStudyHours.innerHTML = `Last week - ${data[2].timeframes.daily.previous} hrs`;
+    previousExerciseHours.innerHTML = `Last week - ${data[3].timeframes.daily.previous} hrs`;
+    previousSocialHours.innerHTML = `Last week - ${data[4].timeframes.daily.previous} hrs`;
+    previousSelfCareHours.innerHTML = `Last week - ${data[5].timeframes.daily.previous} hrs`;
 }
 
 async function getWeeklyData() {
@@ -64,12 +64,12 @@ async function getWeeklyData() {
     socialHours.innerHTML = `${data[4].timeframes.weekly.current} hrs`;
     selfCareHours.innerHTML = `${data[5].timeframes.weekly.current} hrs`;
 
-    previousWorkHours.innerHTML = `${data[0].timeframes.weekly.previous} hrs`;
-    previousPlayHours.innerHTML = `${data[1].timeframes.weekly.previous} hrs`;
-    previousStudyHours.innerHTML = `${data[2].timeframes.weekly.previous} hrs`;
-    previousExerciseHours.innerHTML = `${data[3].timeframes.weekly.previous} hrs`;
-    previousSocialHours.innerHTML = `${data[4].timeframes.weekly.previous} hrs`;
-    previousSelfCareHours.innerHTML = `${data[5].timeframes.weekly.previous} hrs`;
+    previousWorkHours.innerHTML = `Last week - ${data[0].timeframes.weekly.previous} hrs`;
+    previousPlayHours.innerHTML = `Last week - ${data[1].timeframes.weekly.previous} hrs`;
+    previousStudyHours.innerHTML = `Last week - ${data[2].timeframes.weekly.previous} hrs`;
+    previousExerciseHours.innerHTML = `Last week - ${data[3].timeframes.weekly.previous} hrs`;
+    previousSocialHours.innerHTML = `Last week - ${data[4].timeframes.weekly.previous} hrs`;
+    previousSelfCareHours.innerHTML = `Last week - ${data[5].timeframes.weekly.previous} hrs`;
 }
 
 async function getMonthlyData() {
@@ -80,12 +80,12 @@ async function getMonthlyData() {
     socialHours.innerHTML = `${data[4].timeframes.monthly.current} hrs`;
     selfCareHours.innerHTML = `${data[5].timeframes.monthly.current} hrs`;
 
-    previousWorkHours.innerHTML = `${data[0].timeframes.monthly.previous} hrs`;
-    previousPlayHours.innerHTML = `${data[1].timeframes.monthly.previous} hrs`;
-    previousStudyHours.innerHTML = `${data[2].timeframes.monthly.previous} hrs`;
-    previousExerciseHours.innerHTML = `${data[3].timeframes.monthly.previous} hrs`;
-    previousSocialHours.innerHTML = `${data[4].timeframes.monthly.previous} hrs`;
-    previousSelfCareHours.innerHTML = `${data[5].timeframes.monthly.previous} hrs`;
+    previousWorkHours.innerHTML = `Last week - ${data[0].timeframes.monthly.previous} hrs`;
+    previousPlayHours.innerHTML = `Last week - ${data[1].timeframes.monthly.previous} hrs`;
+    previousStudyHours.innerHTML = `Last week - ${data[2].timeframes.monthly.previous} hrs`;
+    previousExerciseHours.innerHTML = `Last week - ${data[3].timeframes.monthly.previous} hrs`;
+    previousSocialHours.innerHTML = `Last week - ${data[4].timeframes.monthly.previous} hrs`;
+    previousSelfCareHours.innerHTML = `Last week - ${data[5].timeframes.monthly.previous} hrs`;
 }
 
 // Buttons

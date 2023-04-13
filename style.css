@@ -93,6 +93,11 @@ h1 {
     height: 80%;
     align-self: end;
     background-color: #1d204b; 
+    transition: .5s;
+}
+
+.tracker:hover {
+    background-color: #2b2f6e;
 }
 
 .tracker::before {
