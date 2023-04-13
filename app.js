@@ -23,24 +23,12 @@ let data;
 async function fetchData() {
     const response = await fetch(url);
     data = await response.json();
-    workHours.innerHTML = `${data[0].timeframes.daily.current} hrs`;
-    playHours.innerHTML = `${data[1].timeframes.daily.current} hrs`;
-    studyHours.innerHTML = `${data[2].timeframes.daily.current} hrs`;
-    exerciseHours.innerHTML = `${data[3].timeframes.daily.current} hrs`;
-    socialHours.innerHTML = `${data[4].timeframes.daily.current} hrs`;
-    selfCareHours.innerHTML = `${data[5].timeframes.daily.current} hrs`;
-
-    previousWorkHours.innerHTML = `Last week - ${data[0].timeframes.daily.previous} hrs`;
-    previousPlayHours.innerHTML = `Last week - ${data[1].timeframes.daily.previous} hrs`;
-    previousStudyHours.innerHTML = `Last week - ${data[2].timeframes.daily.previous} hrs`;
-    previousExerciseHours.innerHTML = `Last week - ${data[3].timeframes.daily.previous} hrs`;
-    previousSocialHours.innerHTML = `Last week - ${data[4].timeframes.daily.previous} hrs`;
-    previousSelfCareHours.innerHTML = `Last week - ${data[5].timeframes.daily.previous} hrs`;
+    getDailyData()
 }
 
 // Get and change data data
 
-async function getDailyData() {
+function getDailyData() {
     workHours.innerHTML = `${data[0].timeframes.daily.current} hrs`;
     playHours.innerHTML = `${data[1].timeframes.daily.current} hrs`;
     studyHours.innerHTML = `${data[2].timeframes.daily.current} hrs`;
@@ -56,7 +44,7 @@ async function getDailyData() {
     previousSelfCareHours.innerHTML = `Last week - ${data[5].timeframes.daily.previous} hrs`;
 }
 
-async function getWeeklyData() {
+function getWeeklyData() {
     workHours.innerHTML = `${data[0].timeframes.weekly.current} hrs`;
     playHours.innerHTML = `${data[1].timeframes.weekly.current} hrs`;
     studyHours.innerHTML = `${data[2].timeframes.weekly.current} hrs`;
@@ -72,7 +60,7 @@ async function getWeeklyData() {
     previousSelfCareHours.innerHTML = `Last week - ${data[5].timeframes.weekly.previous} hrs`;
 }
 
-async function getMonthlyData() {
+function getMonthlyData() {
     workHours.innerHTML = `${data[0].timeframes.monthly.current} hrs`;
     playHours.innerHTML = `${data[1].timeframes.monthly.current} hrs`;
     studyHours.innerHTML = `${data[2].timeframes.monthly.current} hrs`;
@@ -87,6 +75,7 @@ async function getMonthlyData() {
     previousSocialHours.innerHTML = `Last week - ${data[4].timeframes.monthly.previous} hrs`;
     previousSelfCareHours.innerHTML = `Last week - ${data[5].timeframes.monthly.previous} hrs`;
 }
+
 
 // Buttons
 
