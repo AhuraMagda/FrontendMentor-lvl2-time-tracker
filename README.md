@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://ahuramagda.github.io/FrontendMentor-lvl2-time-tracker/]
-- Live Site URL: [https://ahuramagda.github.io/FrontendMentor-lvl2-time-tracker/]
+- Solution URL: [https://ahuramagda.github.io/FrontendMentor-lvl2-time-tracker/](https://ahuramagda.github.io/FrontendMentor-lvl2-time-tracker/)
+- Live Site URL: [https://ahuramagda.github.io/FrontendMentor-lvl2-time-tracker/](https://ahuramagda.github.io/FrontendMentor-lvl2-time-tracker/)
 
 ## My process
 
