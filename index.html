@@ -1,91 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./style.css" type="text/css">
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <main>
-    <div class="grid-part main-part grid-row-span-2">
-      <span id="main-part-name">
-        <img src="./images/image-jeremy.png" alt="phjoto of Jeremy">
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <div class="grid-part main-part grid-row-span-2">
+        <span id="main-part-name">
+          <img src="./images/image-jeremy.png" alt="phjoto of Jeremy" />
           <div>
             <p>report for</p>
             <h1>Jeremy Robson</h1>
           </div>
-      </span>
-      <span id="main-part-buttons">
-        <p class="change-display" id="daily-button">Daily</p>
-        <p class="change-display" id="weekly-button">Weekly</p>
-        <p class="change-display" id="monthly-button">Monthly</p>
-      </span>
-    </div>
-
-    <div class="grid-part tracker work-tracker">
-      <div>
-        <p class="tracker-title">Work</p>
-        <h2 id="work-hours">32hrs</h2>
+        </span>
+        <span id="main-part-buttons">
+          <p class="change-display" id="daily-button">Daily</p>
+          <p class="change-display" id="weekly-button">Weekly</p>
+          <p class="change-display" id="monthly-button">Monthly</p>
+        </span>
       </div>
-      <p id="previous-work-hours">Last Week - 36hrs</p>
-    </div>
 
-    <div class="grid-part tracker play-tracker">
-      <div>
-        <p class="tracker-title">Play</p>
-        <h2 id="play-hours">32hrs</h2>
+      <div class="grid-part tracker work-tracker">
+        <div>
+          <p class="tracker-title">Work</p>
+          <h2 id="work-hours">32hrs</h2>
+        </div>
+        <p id="previous-work-hours">Last Week - 36hrs</p>
       </div>
-      <p id="previous-play-hours">Last Week - 36hrs</p>
-    </div>
 
-    <div class="grid-part tracker study-tracker">
-      <div>
-        <p class="tracker-title">Study</p>
-        <h2 id="study-hours">32hrs</h2>
-      </div>  
+      <div class="grid-part tracker play-tracker">
+        <div>
+          <p class="tracker-title">Play</p>
+          <h2 id="play-hours">32hrs</h2>
+        </div>
+        <p id="previous-play-hours">Last Week - 36hrs</p>
+      </div>
+
+      <div class="grid-part tracker study-tracker">
+        <div>
+          <p class="tracker-title">Study</p>
+          <h2 id="study-hours">32hrs</h2>
+        </div>
         <p id="previous-study-hours">Last Week - 36hrs</p>
-    </div>
-
-    <div class="grid-part tracker exercise-tracker">
-      <div>
-        <p class="tracker-title">Exercise</p>
-        <h2 id="exercise-hours">32hrs</h2>
       </div>
-      <p id="previous-exercise-hours">Last Week - 36hrs</p>
-    </div>
 
-    <div class="grid-part tracker social-tracker">
-      <div>
-        <p class="tracker-title">Social</p>
-        <h2 id="social-hours">32hrs</h2>
+      <div class="grid-part tracker exercise-tracker">
+        <div>
+          <p class="tracker-title">Exercise</p>
+          <h2 id="exercise-hours">32hrs</h2>
+        </div>
+        <p id="previous-exercise-hours">Last Week - 36hrs</p>
       </div>
-      <p id="previous-social-hours">Last Week - 36hrs</p>
-    </div>
 
-    <div class="grid-part tracker self-care-tracker">
-      <div>
-        <p class="tracker-title">Self care</p>
-        <h2 id="self-care-hours">32hrs</h2>
+      <div class="grid-part tracker social-tracker">
+        <div>
+          <p class="tracker-title">Social</p>
+          <h2 id="social-hours">32hrs</h2>
+        </div>
+        <p id="previous-social-hours">Last Week - 36hrs</p>
       </div>
-      <p id="previous-self-care-hours">Last Week - 36hrs</p>
+
+      <div class="grid-part tracker self-care-tracker">
+        <div>
+          <p class="tracker-title">Self care</p>
+          <h2 id="self-care-hours">32hrs</h2>
+        </div>
+        <p id="previous-self-care-hours">Last Week - 36hrs</p>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/AhuraMagda">AhuraMagda</a>.
     </div>
-  </main>
 
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/AhuraMagda">AhuraMagda</a>.
-  </div>
-
-  <script src="./app.js" type="text/javascript"></script>
-</body>
+    <script src="./app.js" type="text/javascript"></script>
+  </body>
 </html>
